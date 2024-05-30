@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+</head>
+<body>
+<center>
+    {% for article in articles %}
+    <article>
+
+        <!--    <img src="{{article.image}}">-->
+        <img src="{{article.thumbnail.url}}" alt="{{article.title}}" width="300" height="200">
+        <h3><a href="{% url 'detail' article.slug %}"> {{article.title}}</a></h3>
+        <d>{{article.publish}}</d>
+        <h5>'description' : {{article.description}}</h5>
+    </article>
+    {% endfor %}
+</center>
+</body>
+</html>
