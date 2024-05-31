@@ -41,4 +41,4 @@ def detail_article(request, slug):
     context = {
         'article': Article.objects.get(slug=slug)
     }
-    return render(request, template_name='detail.html', context=context)
+    return render(request, template_name='blog/detail.html', context=context)
